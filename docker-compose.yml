@@ -1,7 +1,6 @@
 version: '3.8'
 
 services:
-  # Backend (Node.js)
   backend:
     build:
       context: C:\Users\ehuss\OneDrive\Desktop\eventPlanner-back\eventplanner-backend
@@ -16,7 +15,6 @@ services:
       - eventplanner-network
     restart: unless-stopped
 
-  # Frontend (Angular + Nginx)
   frontend:
     build:
       context: C:\Users\ehuss\OneDrive\Desktop\event front\eventplanner-frontend
@@ -30,7 +28,6 @@ services:
       - eventplanner-network
     restart: unless-stopped
 
-# Network for container communication
 networks:
   eventplanner-network:
     driver: bridge
